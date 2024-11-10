@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: mail
+
+  kafka:
+    consumer:
+       group-id: product-created-events
+       properties:
+         spring.json.trusted.packages: com.demo
+
+server:
+  port: 8081
