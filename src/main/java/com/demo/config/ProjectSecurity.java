@@ -20,6 +20,7 @@ public class ProjectSecurity {
                 .requestMatchers("/account/register").permitAll()
                         .anyRequest().permitAll());
         http.formLogin(Customizer.withDefaults());
+        http.httpBasic(Customizer.withDefaults());
         http.csrf(AbstractHttpConfigurer::disable);
         return http.build();
     }
